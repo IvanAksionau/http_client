@@ -6,6 +6,7 @@ import com.ivan.client.http.requester.HttpResponse
 import com.ivan.client.http.requester.HttpResponseException
 import com.ivan.client.http.requester.IRequester
 import com.ivan.client.http.requester.context.IRequestHeadersContext
+import com.ivan.client.utils.HttpRetryExecutor
 import com.ivan.client.utils.RetryExecutor
 import groovy.util.logging.Slf4j
 import org.apache.http.Header
@@ -77,7 +78,7 @@ class EDSAuthorization implements IEDSAuthorization {
         Integer duration = 10
         Integer interval = 3000
         try {
-            RetryExecutor<HttpResponse> executor = new RetryExecutor<>()
+            RetryExecutor executor = new HttpRetryExecutor()
 
             HttpResponse authorizationResponse = executor
                     .setPool(Duration.ofSeconds(duration), interval)

@@ -10,8 +10,8 @@
     <repositories>
         <repository>
             <id>bams</id>
-            <name>BAMS_AMERS-releases</name>
-            <url>https://bams-aws.refinitiv.com/artifactory/release.maven.cloud</url>
+            <name>BAMS_IVAN-releases</name>
+            <url>https://bams-aws.ivan.com/artifactory/release.maven.cloud</url>
         </repository>
     </repositories>
 
@@ -70,7 +70,7 @@
     </dependencies>
 
     <scm>
-        <developerConnection>scm:git:git@git.sami.int.thomsonreuters.com:dev-team/qa-eds-gateway-commons.git
+        <developerConnection>scm:git:git@git.sami.int.ia.com:dev-team/qa-ia-gateway-commons.git
         </developerConnection>
         <tag>HEAD</tag>
     </scm>
